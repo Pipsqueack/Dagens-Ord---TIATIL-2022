@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded",() => {
 
     let availableSpace = 1;
 
-    let word = "harry"
+    let word = "sussy"
 
     let guessedWordCount = 0;
 
