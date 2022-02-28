@@ -5,11 +5,25 @@ document.addEventListener("DOMContentLoaded",() => {
 
     let availableSpace = 1;
 
+    let word = "harry"
+
+    let guessedWordCount = 0;
+
     const keys = document.querySelectorAll('.keyboard-row button');
     
     for (let i = 0; i < keys.length; i++) {
         keys[i].onclick = ({ target }) => {
             const letter = target.getAttribute("data-key");
+
+            if (letter === 'enter') {
+                handleSubmitWord()
+                return;
+            }
+            
+            if (letter === 'del') {
+                handleDeleteLetter()
+                return;
+            }
 
             updateGuessedWords(letter);
         };
@@ -33,6 +47,81 @@ document.addEventListener("DOMContentLoaded",() => {
         }
     }
 
+    function getTileColor(letter, index) {
+        const isCorrectLetter = word.includes(letter)
+
+        if (!isCorrectLetter) {
+            return "rgb(58, 58, 60)";
+        }
+        
+        const letterInThatPosition = word.charAt(index);
+
+        const isCorrectPosition = letter === letterInThatPosition;
+
+        if (isCorrectPosition) {
+            return "rgb(83, 141, 78)";
+        }
+
+        return "rgb(181, 159, 59)";
+    }
+
+    function handleSubmitWord() {
+        const currentWordArr = getCurrentWordArr();
+        if (currentWordArr.length !==5) {
+            window.alert("Ordet måste innehålla 5 bokstäver")
+            return;
+        }
+
+        const currentWord = currentWordArr.join('')
+        
+        const firstLetterId = guessedWordCount * 5 + 1;
+
+        const interval = 200;
+
+        currentWordArr.forEach((letter, index) => {
+            setTimeout(() => {
+                const tileColor = getTileColor(letter, index);
+
+                const letterId = firstLetterId + index;
+
+                const letterEl = document.getElementById(letterId)
+
+                letterEl.classList.add("animate__flipInX")
+
+                letterEl.style = `background-color:${tileColor};border-color:${tileColor}`
+
+            }, interval * index);
+        });
+
+        guessedWordCount += 1;
+
+        if (currentWord === word) {
+            window.alert("Rätt ord! Grattis!")
+        }
+
+        if (guessedWords.length === 6) {
+            window.alert(`Dina gissningar är slut! Ordet var ${word}`)
+        }
+
+        guessedWords.push([])
+    }
+
+    function handleDeleteLetter() {
+
+        const currentWordArr = getCurrentWordArr()
+
+        const removedLetter = currentWordArr.pop()
+
+        guessedWords[guessedWords.length - 1] = currentWordArr
+
+        const lastLetterEl = document.getElementById(String(availableSpace - 1))
+
+        lastLetterEl.textContent = ''
+
+        availableSpace = availableSpace - 1
+
+    }
+
     function createSquares() {
         const gameBoard = document.getElementById("board")
 
@@ -43,6 +132,7 @@ document.addEventListener("DOMContentLoaded",() => {
             gameBoard.appendChild(square)         
         }
     }
+
 
 
 })
