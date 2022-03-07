@@ -3,10 +3,13 @@
     padding: 0;
 }
 
-#container {
-    background-color: black;
+body {
+    background-color: rgb(18, 18, 19);
     width: 100vw;
     height: 100vh;
+}
+
+#game-container {
     display: flex;
     align-items: center;
     flex-direction: column;   
@@ -20,20 +23,26 @@
     flex-direction: column;
 }
 
-
-header {
-    margin: 10px;
+nav {
     border-bottom: 3px solid rgb(58, 58, 60);
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
+.fa {
+    color: gainsboro;
+    background-color: rgb(18, 18, 19);
+    right: 100px;
+}
+
 h1 {
     font-family: megrim;
-    font-size: 4rem;
+    font-size: 3.5rem;
     color: gainsboro;
     font-weight: bold;
+    margin-bottom: 2px;
 }
 
 #board-container {
@@ -56,7 +65,9 @@ h1 {
     border: 2px solid rgb(58, 58, 60);
     min-width: 60px;
     min-height: 60px;
-    font-size: 50px;
+    font-size: 45px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     font-weight: bold;
     color: gainsboro;
     text-transform: uppercase;

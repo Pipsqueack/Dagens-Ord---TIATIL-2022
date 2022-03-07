@@ -48,22 +48,23 @@ document.addEventListener("DOMContentLoaded",() => {
     }
 
     function getTileColor(letter, index) {
-        const isCorrectLetter = word.includes(letter)
-
+        const isCorrectLetter = word.includes(letter);
+    
         if (!isCorrectLetter) {
-            return "rgb(58, 58, 60)";
+          return "rgb(58, 58, 60)";
         }
-        
+    
         const letterInThatPosition = word.charAt(index);
 
         const isCorrectPosition = letter === letterInThatPosition;
-
+    
         if (isCorrectPosition) {
-            return "rgb(83, 141, 78)";
+          return "rgb(83, 141, 78)";
         }
-
+    
         return "rgb(181, 159, 59)";
-    }
+      }
+    
 
     function handleSubmitWord() {
         const currentWordArr = getCurrentWordArr();
@@ -79,20 +80,20 @@ document.addEventListener("DOMContentLoaded",() => {
         const interval = 200;
 
         currentWordArr.forEach((letter, index) => {
-            setTimeout(() => {
-                const tileColor = getTileColor(letter, index);
+          setTimeout(() => {
 
-                const letterId = firstLetterId + index;
+            const tileColor = getTileColor(letter, index);
 
-                const letterEl = document.getElementById(letterId)
+            const letterId = firstLetterId + index;
 
-                letterEl.classList.add("animate__flipInX")
+            const letterEl = document.getElementById(letterId);
 
-                letterEl.style = `background-color:${tileColor};border-color:${tileColor}`
+            letterEl.classList.add("animate__flipInX");
 
-            }, interval * index);
+            letterEl.style = `background-color:${tileColor};border-color:${tileColor}`;
+          }, interval * index);
+
         });
-
         guessedWordCount += 1;
 
         if (currentWord === word) {
@@ -110,6 +111,11 @@ document.addEventListener("DOMContentLoaded",() => {
 
         const currentWordArr = getCurrentWordArr()
 
+        if (currentWordArr == '') {
+            window.alert("Du kan inte ta bort ord från en tom rad!")
+            return
+        }
+
         const removedLetter = currentWordArr.pop()
 
         guessedWords[guessedWords.length - 1] = currentWordArr
@@ -120,16 +126,25 @@ document.addEventListener("DOMContentLoaded",() => {
 
         availableSpace = availableSpace - 1
 
+        console.log(currentWordArr);
+        
+        console.log(guessedWords);
+
     }
 
     function createSquares() {
         const gameBoard = document.getElementById("board")
 
         for (let index = 0; index < 30; index++) {
+
             let square = document.createElement("div")
+
             square.classList.add("square")
+
             square.setAttribute("id", index + 1)   
-            gameBoard.appendChild(square)         
+
+            gameBoard.appendChild(square)       
+
         }
     }
 
