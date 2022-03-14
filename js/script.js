@@ -10,6 +10,16 @@ document.addEventListener("DOMContentLoaded",() => {
     let guessedWordCount = 0;
 
     const keys = document.querySelectorAll('.keyboard-row button');
+
+    const nav = document.getElementById('navLinks')
+
+    const helpButton = document.getElementById('helpButton')
+
+    function toggleMenu() {
+        nav.classList.toggle('navActive')
+    }
+
+    helpButton.addEventListener('click', toggleMenu)
     
     for (let i = 0; i < keys.length; i++) {
         keys[i].onclick = ({ target }) => {
@@ -88,7 +98,7 @@ document.addEventListener("DOMContentLoaded",() => {
 
             const letterEl = document.getElementById(letterId);
 
-            letterEl.classList.add("animate__flipInX");
+            letterEl.classList.add("flipped");
 
             letterEl.style = `background-color:${tileColor};border-color:${tileColor}`;
           }, interval * index);
@@ -112,7 +122,7 @@ document.addEventListener("DOMContentLoaded",() => {
         const currentWordArr = getCurrentWordArr()
 
         if (currentWordArr == '') {
-            window.alert("Du kan inte ta bort ord från en tom rad!")
+            window.alert("Du kan inte ta bort bokstäver från en tom eller redan inlagd rad!")
             return
         }
 
