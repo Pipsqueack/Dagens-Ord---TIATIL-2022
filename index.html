@@ -21,61 +21,73 @@
 
 </head>
 <body>
-    <section id="help">
-        <button id="helpButton" class="fa fa-question-circle"></button>
-        <ul id="navLinks">
-            <h3>Hur man spelar</h3>
-           <p></p>
-        </ul>
-    </section>
+    <ul id="navLinks">
+        <h3>Hur man spelar</h3>
+        <section id="textContainer">
+            <p>
+                Gissa 
+                <strong>DAGENS ORD</strong>
+                 på sex försök.
+            </p>
+            <p>
+                Varje gissning måste vara ett giltigt fem bokstäver långt ord. 
+            </p>
+            <p>
+                Skriv in ordet med hjälp av sidans tangentbord och tryck på <strong>ENTER</strong> för att gissa.
+            </p>
+        </section>
+    </ul>
     <nav>
+        <section id="help">
+            <button id="helpButton" class="fa fa-question-circle"></button>
+        </section>
         <h1>Dagens Ord</h1>
     </nav>
-    <div id="game-container">            
+    <div id="gameContainer">            
         <div id="game"> 
-            <div id="board-container">
+            <div id="boardContainer">
                 <div id="board"></div>
             </div>
 
-            <div id="keyboard-container">
-                <div class="keyboard-row">
-                    <button data-key="q">q</button>
-                    <button data-key="w">w</button>
-                    <button data-key="e">e</button>
-                    <button data-key="r">r</button>
-                    <button data-key="t">t</button>
-                    <button data-key="y">y</button>
-                    <button data-key="u">u</button>
-                    <button data-key="i">i</button>
-                    <button data-key="o">o</button>
-                    <button data-key="p">p</button>
-                    <button data-key="å">å</button>
+            <div id="keyboardContainer">
+                <div class="keyboardRow">
+                    <button dataKey="q">q</button>
+                    <button dataKey="w">w</button>
+                    <button dataKey="e">e</button>
+                    <button dataKey="r">r</button>
+                    <button dataKey="t">t</button>
+                    <button dataKey="y">y</button>
+                    <button dataKey="u">u</button>
+                    <button dataKey="i">i</button>
+                    <button dataKey="o">o</button>
+                    <button dataKey="p">p</button>
+                    <button dataKey="å">å</button>
                 </div>
-                <div class="keyboard-row">
-                    <div class="spacer-half"></div>
-                    <button data-key="a">a</button>
-                    <button data-key="s">s</button>
-                    <button data-key="d">d</button>
-                    <button data-key="f">f</button>
-                    <button data-key="g">g</button>
-                    <button data-key="h">h</button>
-                    <button data-key="j">j</button>
-                    <button data-key="k">k</button>
-                    <button data-key="l">l</button>
-                    <button data-key="ö">ö</button>
-                    <button data-key="ä">ä</button>
-                    <div class="spacer-half"></div>
+                <div class="keyboardRow">
+                    <div class="spacerHalf"></div>
+                    <button dataKey="a">a</button>
+                    <button dataKey="s">s</button>
+                    <button dataKey="d">d</button>
+                    <button dataKey="f">f</button>
+                    <button dataKey="g">g</button>
+                    <button dataKey="h">h</button>
+                    <button dataKey="j">j</button>
+                    <button dataKey="k">k</button>
+                    <button dataKey="l">l</button>
+                    <button dataKey="ö">ö</button>
+                    <button dataKey="ä">ä</button>
+                    <div class="spacerHalf"></div>
                 </div>
-                <div class="keyboard-row">
-                    <button data-key="enter" class="wide-button">Enter</button>
-                    <button data-key="z">z</button>
-                    <button data-key="x">x</button>
-                    <button data-key="c">c</button>
-                    <button data-key="v">v</button>
-                    <button data-key="b">b</button>
-                    <button data-key="n">n</button>
-                    <button data-key="m">m</button>
-                    <button data-key="del" class="wide-button">Del</button>
+                <div class="keyboardRow">
+                    <button dataKey="enter" class="wideButton">Enter</button>
+                    <button dataKey="z">z</button>
+                    <button dataKey="x">x</button>
+                    <button dataKey="c">c</button>
+                    <button dataKey="v">v</button>
+                    <button dataKey="b">b</button>
+                    <button dataKey="n">n</button>
+                    <button dataKey="m">m</button>
+                    <button dataKey="del" class="wideButton">Del</button>
                 </div>
             </div>
             </div>
