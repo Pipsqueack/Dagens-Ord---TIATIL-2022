@@ -6,23 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dagens Ord</title>
 
-    <script src="js/script.js"></script>
-
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Megrim&display=swap">
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <script src="js/script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
 </head>
 <body>
     <ul id="navLinks">
-        <h3>Hur man spelar</h3>
+        <h3><strong>Hur man spelar</strong></h3>
         <section id="textContainer">
             <p>
                 Gissa 
@@ -35,12 +34,18 @@
             <p>
                 Skriv in ordet med hjälp av sidans tangentbord och tryck på <strong>ENTER</strong> för att gissa.
             </p>
+            <p class="bottomLine">
+                Efter varje gissning kommer färgerna av rutorna förändras för att visa hur nära ordet din gissning var.
+            </p>
+            <p><strong>Exemplen</strong></p>
+            <div class="helpBoardContainer">
+                <div class="helpBoard"></div>
+            </div>
+            
         </section>
     </ul>
     <nav>
-        <section id="help">
-            <button id="helpButton" class="fa fa-question-circle"></button>
-        </section>
+        <button id="helpButton" class="fa fa-question-circle"></button>
         <h1>Dagens Ord</h1>
     </nav>
     <div id="gameContainer">            

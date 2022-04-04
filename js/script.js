@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded",() => {
         "Abarn",
         "aljud",
         "amoll",
-        "àpris",
         "abbot",
         "abort",
         "absid",
@@ -294,7 +293,6 @@ document.addEventListener("DOMContentLoaded",() => {
         "bland",
         "blank",
         "blarr",
-        "blasé",
         "blask",
         "blast",
         "bleck",
@@ -427,7 +425,6 @@ document.addEventListener("DOMContentLoaded",() => {
         "bröst",
         "Budda",
         "buffa",
-        "buffé",
         "bugga",
         "bukig",
         "bukta",
@@ -639,7 +636,6 @@ document.addEventListener("DOMContentLoaded",() => {
         "doula",
         "doyen",
         "draft",
-        "dragé",
         "dragg",
         "drake",
         "drama",
@@ -783,7 +779,6 @@ document.addEventListener("DOMContentLoaded",() => {
         "ensak",
         "ensam",
         "ental",
-        "entré",
         "envar",
         "envig",
         "envis",
@@ -793,7 +788,6 @@ document.addEventListener("DOMContentLoaded",() => {
         "eoler",
         "eosin",
         "episk",
-        "epopé",
         "epoxi",
         "espri",
         "ester",
@@ -962,7 +956,6 @@ document.addEventListener("DOMContentLoaded",() => {
         "fnatt",
         "fniss",
         "fnysa",
-        "foajé",
         "focka",
         "foder",
         "fodra",
@@ -1143,7 +1136,6 @@ document.addEventListener("DOMContentLoaded",() => {
         "gjord",
         "gjuse",
         "gjuta",
-        "glacé",
         "glada",
         "glana",
         "glans",
@@ -1210,7 +1202,6 @@ document.addEventListener("DOMContentLoaded",() => {
         "grepe",
         "grepp",
         "greve",
-        "grevé",
         "grift",
         "grill",
         "grina",
@@ -1343,7 +1334,6 @@ document.addEventListener("DOMContentLoaded",() => {
         "hasta",
         "hatta",
         "havre",
-        "hebré",
         "heden",
         "heder",
         "hedra",
@@ -1695,9 +1685,7 @@ document.addEventListener("DOMContentLoaded",() => {
         "kakao",
         "kakel",
         "kakla",
-        "kakté",
         "kalas",
-        "kaldé",
         "kalif",
         "kalka",
         "kalla",
@@ -1729,7 +1717,6 @@ document.addEventListener("DOMContentLoaded",() => {
         "karit",
         "karma",
         "karpa",
-        "karré",
         "karsk",
         "karst",
         "karta",
@@ -2187,7 +2174,6 @@ document.addEventListener("DOMContentLoaded",() => {
         "linda",
         "linje",
         "linka",
-        "Linné",
         "linne",
         "lipas",
         "lipen",
@@ -2205,7 +2191,6 @@ document.addEventListener("DOMContentLoaded",() => {
         "litsa",
         "livad",
         "liver",
-        "livré",
         "ljuda",
         "ljuga",
         "ljung",
@@ -2347,7 +2332,6 @@ document.addEventListener("DOMContentLoaded",() => {
         "mamma",
         "manad",
         "maner",
-        "manér",
         "manet",
         "manga",
         "mango",
@@ -2437,7 +2421,6 @@ document.addEventListener("DOMContentLoaded",() => {
         "mjäll",
         "mjöla",
         "mjölk",
-        "moaré",
         "mobba",
         "mobil",
         "mocka",
@@ -2457,7 +2440,6 @@ document.addEventListener("DOMContentLoaded",() => {
         "molok",
         "monad",
         "monke",
-        "monté",
         "moona",
         "moped",
         "moppa",
@@ -2477,7 +2459,6 @@ document.addEventListener("DOMContentLoaded",() => {
         "morän",
         "mosel",
         "mosig",
-        "moské",
         "mossa",
         "mosse",
         "motig",
@@ -2881,7 +2862,6 @@ document.addEventListener("DOMContentLoaded",() => {
         "pasha",
         "pasma",
         "passa",
-        "passé",
         "pasta",
         "paten",
         "pater",
@@ -2900,7 +2880,6 @@ document.addEventListener("DOMContentLoaded",() => {
         "penne",
         "penni",
         "penny",
-        "pensé",
         "peppa",
         "persa",
         "peruk",
@@ -3087,7 +3066,6 @@ document.addEventListener("DOMContentLoaded",() => {
         "putto",
         "pycke",
         "pyemi",
-        "pygmé",
         "pylon",
         "pynta",
         "pysch",
@@ -3348,7 +3326,6 @@ document.addEventListener("DOMContentLoaded",() => {
         "satsa",
         "satyr",
         "sauna",
-        "sauté",
         "savas",
         "savig",
         "scarf",
@@ -3739,7 +3716,6 @@ document.addEventListener("DOMContentLoaded",() => {
         "snöra",
         "snöre",
         "snörp",
-        "soaré",
         "sobel",
         "sober",
         "socio",
@@ -3937,7 +3913,6 @@ document.addEventListener("DOMContentLoaded",() => {
         "stött",
         "stöva",
         "subba",
-        "succé",
         "sucka",
         "Sudan",
         "sudda",
@@ -4231,7 +4206,6 @@ document.addEventListener("DOMContentLoaded",() => {
         "tovig",
         "toxin",
         "traja",
-        "traké",
         "trakt",
         "trala",
         "trall",
@@ -4265,9 +4239,7 @@ document.addEventListener("DOMContentLoaded",() => {
         "trist",
         "trixa",
         "triör",
-        "trofé",
         "Troja",
-        "troké",
         "troll",
         "tromb",
         "trona",
@@ -4332,7 +4304,6 @@ document.addEventListener("DOMContentLoaded",() => {
         "turas",
         "turbo",
         "turbo",
-        "turné",
         "tusan",
         "tusch",
         "tusen",
@@ -4891,12 +4862,18 @@ document.addEventListener("DOMContentLoaded",() => {
 
     function handleSubmitWord() {
         const currentWordArr = getCurrentWordArr();
+
+        const currentWord = currentWordArr.join('')
+
         if (currentWordArr.length !==5) {
             window.alert("Ordet måste innehålla 5 bokstäver")
             return;
         }
 
-        const currentWord = currentWordArr.join('')
+        if (jQuery.inArray(currentWord, wordArr) == -1) {
+            window.alert("Ordet kändes inte igen!");
+            return
+        }
         
         const firstLetterId = guessedWordCount * 5 + 1;
 
@@ -4911,7 +4888,9 @@ document.addEventListener("DOMContentLoaded",() => {
 
             const letterEl = document.getElementById(letterId);
 
-            letterEl.classList.add("flipped");
+            letterEl.classList.add('animate__animated')
+
+            letterEl.classList.add('animate__flipInX');
 
             letterEl.style = `background-color:${tileColor}; border-color:${tileColor}`;
           }, interval * index);
@@ -4922,7 +4901,7 @@ document.addEventListener("DOMContentLoaded",() => {
         if (currentWord === word) {
             window.alert("Rätt ord! Grattis!")
         } else if(guessedWords.length === 6) {
-            window.alert(`Dina gissningar är slut! Ordet var ${word}`)
+            window.alert(`Dina gissningar är slut! Ordet var ${word}!`)
         }
         
         guessedWords.push([])
