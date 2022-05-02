@@ -30,7 +30,8 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-bottom: 3vw;
+    margin-bottom: 2.1vw;
+    height: 8%;
 }
 
 #helpButton {
@@ -100,14 +101,18 @@ ul > h3 {
     text-align: left;
 }
 
+#bottomLineHelp {
+    width: 35%;
+}
+
 h1 {
-    font-size: 2.1rem;
+    font-size: 2.2rem;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;    color: gainsboro;
     font-weight: bold;
     letter-spacing: 6px;
     margin-bottom: 7px;
-    margin-top: 2px;
+    margin-top: 8px;
 }
 
 .flipped {
@@ -123,7 +128,7 @@ h1 {
     overflow: hidden;
 }
 
-.helpBoardContainer {
+.boardContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,12 +136,42 @@ h1 {
     overflow: hidden;
 }
 
+#helpBoardContainer {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+
+
 #board {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 5px;
     padding: 10px;
     box-sizing: border-box;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.green {
+    background-color: rgb(83, 141, 78);
+    border-color: rgb(83, 141, 78);
+}
+
+.yellow {
+    background-color: rgb(181, 159, 59);
+    border-color: rgb(181, 159, 59);
+}
+
+.grey {
+    background-color: rgb(129, 131, 132);
+    border-color: rgb(129, 131, 132);
 }
 
 .square {
@@ -203,6 +238,9 @@ footer {
     #textContainer > p {
         width: 85%;
     }
+    #bottomLineHelp {
+        width: 85%;
+    }
     .square {
         border: 2px solid rgb(58, 58, 60);
         min-width: 50px;
@@ -217,4 +255,10 @@ footer {
         justify-content: center;
         align-items: center;
     }
+}
+
+#bottomLineHelp {
+    height: 2px;
+    margin-block-start: 0.3em;
+    margin-block-end: 0.6em;
 }

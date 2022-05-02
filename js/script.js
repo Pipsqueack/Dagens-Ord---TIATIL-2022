@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded",() => {
 
     let availableSpace = 1;
 
+    //tips är att dölja rad 10 för att göra koden något mera lättläst 
+    // array som innehåller alla giltiga ord med längden på fem bokstäver taget från svenska ordboken, filtreringen av ord gjordes mha av en algorithm skriven i ruby som filterade ut ord över 5 bokstäver långt.
     const wordArr = [
         "aktig",
         "artad",
@@ -448,6 +450,7 @@ document.addEventListener("DOMContentLoaded",() => {
         "butan",
         "butik",
         "butta",
+        "orten",
         "butyl",
         "bygel",
         "bygga",
@@ -4656,12 +4659,8 @@ document.addEventListener("DOMContentLoaded",() => {
         "weber",
         "whist",
         "wicca",
-        "xaxel",
-        "Xkrok",
         "xenon",
         "xylos",
-        "yaxel",
-        "yljud",
         "yacht",
         "yllen",
         "ymnig",
@@ -4679,12 +4678,9 @@ document.addEventListener("DOMContentLoaded",() => {
         "yttra",
         "yttre",
         "ytved",
-        "yxegg",
-        "Zstål",
         "zappa",
         "zebra",
         "zenit",
-        "zloty",
         "zonal",
         "zooma",
         "zygot",
@@ -4799,12 +4795,15 @@ document.addEventListener("DOMContentLoaded",() => {
 
     const helpButton = document.getElementById('helpButton')
 
+    // toggleMenu funktionen gör så att hjälpknappen längst upp i vänstra hörnet vecklar ut en ny menu och sätter igång en alternativ css kod med hjälp av klassändringar av elementen i html-koden.
     function toggleMenu() {
         nav.classList.toggle('navActive')
     }
 
+    // kod som gör att toggleMenu körs när helpknapp elementet trycks på 
     helpButton.addEventListener('click', toggleMenu)
     
+    // övergripande system för tangentbordet som gör att de olika bokstäverna, enter och delete funkar och kallar på rätt funktion.
     for (let i = 0; i < keys.length; i++) {
         keys[i].onclick = ({ target }) => {
             const letter = target.getAttribute("dataKey");
@@ -4823,11 +4822,13 @@ document.addEventListener("DOMContentLoaded",() => {
         };
     }
 
+    // funktion som returnerar det nuvarande/senaste som skrivits som gissats, alltså den sista raden i arrayen guessed words.
     function getCurrentWordArr() {
         const numberOfGuessedWords = guessedWords.length
         return guessedWords[numberOfGuessedWords - 1];
     }
 
+    // funktion som uppdaterar och lägger till bokstäver på det senaste ordgissningen upp till fem bokstäver långt, tar in bokstaven som tryckts på tangentbordet samt den senaste radens innehåll och returnerar en uppdaterad rad med den tryckte bokstaven med.
     function updateGuessedWords(letter) {
         const currentWordArr = getCurrentWordArr();
 
@@ -4841,6 +4842,7 @@ document.addEventListener("DOMContentLoaded",() => {
         }
     }
 
+    // funktion som kollar igenom gissningen och ger de färg, tar in en indexposition och en bokstav och returnerar vilken färg av grön, gul och grå den bör få beroende på position och bokstav
     function getTileColor(letter, index) {
         const isCorrectLetter = word.includes(letter);
     
@@ -4855,11 +4857,12 @@ document.addEventListener("DOMContentLoaded",() => {
         if (isCorrectPosition) {
           return "rgb(83, 141, 78)";
         }
-    
+
         return "rgb(181, 159, 59)";
       }
     
 
+    // funktion som kallas på när enter knappen trycks på, kollar att det gissade ordet finns i ordlistan och är fem bokstäver långt och ger sedan resultatet på gissningen
     function handleSubmitWord() {
         const currentWordArr = getCurrentWordArr();
 
@@ -4907,6 +4910,7 @@ document.addEventListener("DOMContentLoaded",() => {
         guessedWords.push([])
     }
 
+    // funktion som tar bort bokstäver från den senaste raden av de gissade orden, kallas på när delete knappen trycks på
     function handleDeleteLetter() {
 
         const currentWordArr = getCurrentWordArr()
@@ -4931,6 +4935,7 @@ document.addEventListener("DOMContentLoaded",() => {
 
     }
 
+    // funktion som skapar alla bokstavsrutor i boardcontainer, kallas på i början av skriptet och returnerar den hårdkodade mängden rutor
     function createSquares() {
         const gameBoard = document.getElementById("board")
 
